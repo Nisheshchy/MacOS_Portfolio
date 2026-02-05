@@ -87,7 +87,7 @@ const Welcome = () => {
       className="min-h-screen flex flex-col justify-center p-10">
       <p ref={subtitleRef}>
         {rendertext(
-          "Hey Guys, It's me Nishesh! Welcome to my",
+          "Hey Guys, I'm Nishesh! Welcome to my",
           "text-3xl font-georama",
           100,
         )}
