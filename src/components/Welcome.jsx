@@ -8,7 +8,7 @@ const FONT_WEIGHTS = {
   title: { main: 400, max: 900, default: 400 },
 };
 
-
+// Fixed: Corrected parameter order and removed unused 'ref'
 const rendertext = (text, className, baseWeight = 400) => {
   return [...text].map((char, i) => (
     <span
@@ -16,7 +16,7 @@ const rendertext = (text, className, baseWeight = 400) => {
       className={className}
       style={{
         fontVariationSettings: `'wght' ${baseWeight}`,
-        display: "inline-block",
+        display: "inline-block", // Ensures smooth width transitions
       }}>
       {char === " " ? "\u00A0" : char}
     </span>
@@ -87,7 +87,7 @@ const Welcome = () => {
       className="min-h-screen flex flex-col justify-center p-10">
       <p ref={subtitleRef}>
         {rendertext(
-          "Hey Guys, It's me Nishesh! Welcome to my",
+          "Hey, I'm Nishesh! Welcome to my",
           "text-3xl font-georama",
           100,
         )}
