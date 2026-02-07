@@ -1,20 +1,28 @@
-# React + Vite
+#  macOS-Style Interactive Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, interactive desktop environment built with **React**, **GSAP**, and **Tailwind CSS**. This portfolio doesn't just display projects; it behaves like a fully functional operating system with draggable windows, a physics-based dock, and smooth system animations.
 
-Currently, two official plugins are available:
+##  Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **macOS Desktop Environment**: Fully interactive desktop UI.
+- **GSAP Animations**: Fluid, high-performance motion design and hover effects.
+- **Draggable Windows**: Multi-window system with Z-index management (focusing).
+- **Functional Apps**:
+  - **Finder**: Navigate through project categories and folders.
+  - **Terminal**: A CLI-themed view of your tech stack.
+  - **Safari**: A browser-like interface for blog posts.
+  - **Resume Viewer**: Integrated PDF viewer with a one-click download.
+  - **Responsive Dock**: A magnifying dock with real-time physics and tooltips.
+  - **Global State**: Built with **Zustand** and **Immer** for seamless window and location management.
 
-## React Compiler
+##  Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React](https://reactjs.org/) (Vite)
+- **Animation**: [GSAP](https://greensock.com/gsap/) (GreenSock Animation Platform)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **State Management**: [Zustand](https://github.com/pmndrs/zustand) & [Immer](https://immerjs.github.io/immer/)
+- **Icons**: [Lucide React](https://lucide.dev/)
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 
 
 
-Author -> Nishesh Chaudhary
