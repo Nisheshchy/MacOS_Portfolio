@@ -1,6 +1,6 @@
 /** @format */
 import { Navbar, Welcome, Dock } from "#components";
-import { Safari, Terminal } from "#windows";
+import { Resume, Safari, Terminal } from "#windows";
 
 const App = () => {
   return (
@@ -10,6 +10,7 @@ const App = () => {
       <Dock />
       <Terminal />
       <Safari />
+      <Resume />
     </main>
   );
 };
