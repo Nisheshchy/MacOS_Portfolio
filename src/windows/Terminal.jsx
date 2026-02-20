@@ -43,7 +43,7 @@ const Terminal = () => {
         <div className="footnote">
           <p className="flex items-center gap-1">
             <Check size={20} /> {techStack.length} of {techStack.length} stacks
-            loaded. (100%)
+            loaded. (50%)
           </p>
 
           <p className="flex items-center gap-1">
