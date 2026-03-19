@@ -81,14 +81,14 @@ const blogPosts = [
     id: 1,
     date: "Sep 2, 2025",
     title:
-      "JAvaScript Explained: What It Is, Why It Matters, and How to Master It",
+      "JAvaScript Explained: What It Is, Why It Matters",
     image: "/images/blog1.png",
     link: "website link",
   },
   {
     id: 2,
     date: "Aug 28, 2025",
-    title: "The Ultimate Guide to Mastering Three.js for 3D Development",
+    title: "The Ultimate Guide to code",
     image: "/images/blog2.png",
     link: "website link",
   },
@@ -188,14 +188,42 @@ const gallery = [
   {
     id: 1,
     img: "/images/nishesh-1.jpg",
+    categories: ["Memories", "People"],
   },
   {
     id: 2,
     img: "/images/nishesh-2.jpg",
+    categories: ["Places", "People"],
   },
   {
     id: 3,
-    img: "/images/nishesh-1.jpg",
+    img: "/images/nishesh.jpg",
+    categories: ["People"],
+  },
+  {
+    id: 4,
+    img: "/images/project-1.png",
+    categories: ["Memories", "Places"],
+  },
+  {
+    id: 5,
+    img: "/images/project-2.png",
+    categories: ["Places"],
+  },
+  {
+    id: 6,
+    img: "/images/project-3.png",
+    categories: ["Memories"],
+  },
+  {
+    id: 7,
+    img: "/images/blog1.png",
+    categories: ["Memories", "People"],
+  },
+  {
+    id: 8,
+    img: "/images/blog2.png",
+    categories: ["Places"],
   },
 ];
 
