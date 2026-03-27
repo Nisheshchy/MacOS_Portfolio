@@ -65,21 +65,21 @@ const Finder = ({ data }) => {
           {renderList("Work Project", locations.work?.children || [])}
         </div>
 
-        <ul className="content grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-8 p-10 auto-rows-max overflow-y-auto w-full">
+        <ul className="content grid grid-cols-[repeat(auto-fill,minmax(110px,1fr))] gap-4 p-6 auto-rows-max overflow-y-auto w-full">
           {activeLocation?.children &&
             activeLocation?.children.map((item) => (
               <li
                 key={item.id}
-                className="flex flex-col items-center gap-3 group cursor-pointer hover:bg-black/5 p-4 rounded-xl transition-all"
+                className="flex flex-col items-center gap-2 group cursor-pointer hover:bg-black/5 p-3 rounded-xl transition-all h-fit"
                 onClick={() => openItem(item)}>
-                <div className="relative">
+                <div className="relative p-1">
                   <img
                     src={item.icon}
                     alt={item.name}
-                    className="size-16 object-contain drop-shadow-sm group-hover:scale-105 transition-transform duration-300"
+                    className="size-16 object-contain drop-shadow-md group-hover:drop-shadow-lg transition-all duration-300"
                   />
                 </div>
-                <p className="text-xs text-center font-medium text-gray-800 break-words w-full line-clamp-2 leading-tight">
+                <p className="text-[11px] text-center font-medium text-gray-800 break-words w-full px-1 line-clamp-2 leading-tight">
                   {item.name}
                 </p>
               </li>
