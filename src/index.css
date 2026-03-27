@@ -79,7 +79,7 @@ body {
     /* Flex layout to center children */
     @apply flex flex-col items-center justify-center text-center;
 
-    @apply text-white select-none w-full max-sm:h-screen max-sm:px-10 [text-shadow:0_2px_8px_rgba(0,0,0,0.5)];
+    @apply text-white select-none w-full max-sm:h-screen max-sm:px-10 [text-shadow:0_2px_8px_rgba(0, 0, 0, 0.5)];
 
     .small-screen {
       @apply sm:hidden m-7 bg-red-300/20 backdrop-blur-lg p-3 rounded-md absolute top-10;
@@ -396,7 +396,7 @@ body {
         }
 
         p {
-          @apply text-sm text-white text-center px-2 py-0.5 rounded-sm group-hover:bg-blue-600 transition-all duration-300 max-w-32 [text-shadow:0_1px_3px_rgba(0,0,0,0.9)];
+          @apply text-sm text-white text-center px-2 py-0.5 rounded-sm group-hover:bg-blue-600 transition-all duration-300 max-w-32 [text-shadow:0_1px_3px_rgba(0, 0, 0, 0.9)];
         }
       }
     }
