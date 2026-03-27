@@ -11,9 +11,19 @@ import {
   Photos,
 } from "#windows";
 
+import useSystemStore from "#store/system";
+import clsx from "clsx";
+
+import ControlCenter from "./components/ControlCenter";
+
 const App = () => {
+  const { brightness, isDarkMode, isControlCenterOpen, setControlCenter } = useSystemStore();
+
   return (
-    <main>
+    <main
+      className={clsx(isDarkMode && "dark")}
+      style={{ filter: `brightness(${brightness}%)` }}
+    >
       <Navbar />
       <Welcome />
       <Dock />
@@ -26,6 +36,11 @@ const App = () => {
       <Contact />
       <Photos />
       <Home />
+
+      <ControlCenter
+        isOpen={isControlCenterOpen}
+        onClose={() => setControlCenter(false)}
+      />
     </main>
   );
 };
