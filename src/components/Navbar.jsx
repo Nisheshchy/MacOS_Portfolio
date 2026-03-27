@@ -4,12 +4,21 @@ import { navIcons, navLinks } from "#constants";
 import useWindowStore from "#store/window";
 
 
+import useSystemStore from "#store/system";
+
 const Navbar = () => {
   const { openWindow } = useWindowStore();
+  const { toggleControlCenter } = useSystemStore();
 
   const handleNavClick = (type) => {
     console.log("Opening window:", type);
     openWindow(type);
+  };
+
+  const handleIconClick = (id) => {
+    if (id === 4) {
+      toggleControlCenter();
+    }
   };
 
   return (
@@ -32,7 +41,7 @@ const Navbar = () => {
       <div>
         <ul>
           {navIcons.map(({ id, img }) => (
-            <li key={id}>
+            <li key={id} onClick={() => handleIconClick(id)}>
               <img src={img} className="icon-hover" alt={`icon-${id}`} />
             </li>
           ))}
