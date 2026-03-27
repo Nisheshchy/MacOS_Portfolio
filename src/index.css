@@ -315,7 +315,7 @@ body {
   }
 
   #finder {
-    @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
+    @apply absolute w-[800px] left-1/2 -ms-[400px] top-40 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl bg-white flex flex-col;
 
     .sidebar {
       @apply w-48 bg-gray-50 border-r border-gray-200 flex flex-col p-5 space-y-3;
@@ -342,18 +342,10 @@ body {
     }
 
     .content {
-      @apply flex-1 p-8 bg-white max-w-2xl relative;
+      @apply flex-1 bg-white overflow-y-auto;
 
       li {
-        @apply absolute flex items-center flex-col gap-3;
-
-        img {
-          @apply object-contain object-center size-16 relative group-hover:scale-105;
-        }
-
-        p {
-          @apply text-sm text-center font-medium w-40;
-        }
+        @apply flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-gray-100 transition-all select-none;
       }
     }
   }

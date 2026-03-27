@@ -7,9 +7,17 @@ import clsx from "clsx";
 import { Search } from "lucide-react";
 import { locations } from "#constants";
 
-const Finder = () => {
+import { useEffect } from "react";
+
+const Finder = ({ data }) => {
   const { openWindow } = useWindowStore();
   const { activeLocation, setActiveLocation } = useLocationStore();
+
+  useEffect(() => {
+    if (data) {
+      setActiveLocation(data);
+    }
+  }, [data, setActiveLocation]);
 
   const openItem = (item) => {
     // Implement the logic to open the item here
@@ -44,26 +52,36 @@ const Finder = () => {
 
   return (
     <>
-      <div id="window-header">
+      <div id="window-header" className="flex items-center gap-4">
         <WindowControls target="finder" />
-        <Search className="icon" />
+        <span className="font-semibold text-gray-700">{activeLocation?.name || "Finder"}</span>
+        <div className="flex-1" />
+        <Search className="icon size-4" />
       </div>
 
-      <div className="bg-white flex h-full">
+      <div className="bg-white flex h-[500px]">
         <div className="sidebar">
           {renderList("Favorites", Object.values(locations))}
           {renderList("Work Project", locations.work?.children || [])}
         </div>
 
-        <ul className="content">
+        <ul className="content grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-8 p-10 auto-rows-max overflow-y-auto w-full">
           {activeLocation?.children &&
             activeLocation?.children.map((item) => (
               <li
                 key={item.id}
-                className={item.position}
+                className="flex flex-col items-center gap-3 group cursor-pointer hover:bg-black/5 p-4 rounded-xl transition-all"
                 onClick={() => openItem(item)}>
-                <img src={item.icon} alt={item.name} />
-                <p>{item.name}</p>
+                <div className="relative">
+                  <img
+                    src={item.icon}
+                    alt={item.name}
+                    className="size-16 object-contain drop-shadow-sm group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <p className="text-xs text-center font-medium text-gray-800 break-words w-full line-clamp-2 leading-tight">
+                  {item.name}
+                </p>
               </li>
             ))}
         </ul>

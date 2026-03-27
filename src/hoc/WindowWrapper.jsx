@@ -12,7 +12,7 @@ gsap.registerPlugin(Draggable);
 const WindowWrapper = (Component, windowKey) => {
   const Wrapped = (props) => {
     const { windows, focusWindow } = useWindowStore();
-    const { isOpen, zIndex } = windows[windowKey];
+    const { isOpen, zIndex, data } = windows[windowKey];
     const ref = useRef(null);
 
     // Handle Entry Animation
@@ -58,7 +58,7 @@ const WindowWrapper = (Component, windowKey) => {
         ref={ref}
         style={{ zIndex, position: "absolute" }}
         className="window-container">
-        <Component {...props} />
+        <Component {...props} data={data} />
       </section>
     );
   };
