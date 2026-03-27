@@ -13,6 +13,43 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  transition: filter 0.3s ease;
+}
+
+main.dark {
+  background-image: url("/images/wallpaper.png");
+  /* We can adjust the wallpaper brightness too */
+  background-color: #000;
+
+  nav {
+    @apply bg-black/50 text-white;
+
+    time {
+      @apply text-white;
+    }
+  }
+
+  .window-container {
+    .bg-white {
+      @apply bg-gray-900 text-gray-100;
+    }
+
+    .sidebar {
+      @apply bg-black/40 border-gray-700 text-gray-300;
+    }
+
+    .content {
+      @apply bg-transparent;
+    }
+
+    #window-header {
+      @apply bg-gray-800 border-gray-700 text-gray-400;
+    }
+  }
+
+  #dock .dock-container {
+    @apply bg-black/40;
+  }
 }
 
 @theme {
@@ -79,7 +116,7 @@ body {
     /* Flex layout to center children */
     @apply flex flex-col items-center justify-center text-center;
 
-    @apply text-white select-none w-full max-sm:h-screen max-sm:px-10 [text-shadow:0_2px_8px_rgba(0,0,0,0.5)];
+    @apply text-white select-none w-full max-sm:h-screen max-sm:px-10 [text-shadow:0_2px_8px_rgba(0, 0, 0, 0.5)];
 
     .small-screen {
       @apply sm:hidden m-7 bg-red-300/20 backdrop-blur-lg p-3 rounded-md absolute top-10;
@@ -388,7 +425,7 @@ body {
         }
 
         p {
-          @apply text-sm text-white text-center px-2 py-0.5 rounded-sm group-hover:bg-blue-600 transition-all duration-300 max-w-32 [text-shadow:0_1px_3px_rgba(0,0,0,0.9)];
+          @apply text-sm text-white text-center px-2 py-0.5 rounded-sm group-hover:bg-blue-600 transition-all duration-300 max-w-32 [text-shadow:0_1px_3px_rgba(0, 0, 0, 0.9)];
         }
       }
     }
