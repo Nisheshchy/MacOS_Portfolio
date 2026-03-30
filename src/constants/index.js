@@ -301,7 +301,7 @@ const WORK_LOCATION = {
     // ▶ Project 2
     {
       id: 6,
-      name: "AI Resume Analyzer",
+      name: "..",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
